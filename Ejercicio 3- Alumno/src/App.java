@@ -16,15 +16,19 @@ import Servicio.AlumnoService;
 
 public class App {
     public static void main(String[] args) {
-        //Se instancian alumnos
+        // Se instancian alumnos y se los guarda en una arraylist
         AlumnoService alser = new AlumnoService();
         ArrayList<Alumno> lista = alser.crearAlumnos();
+        // se llama al método que calcula la nota final. A continuación se evalúa si la
+        // nota final es igual a 0.0, de ser así el alumno buscado no está en la lista
+        // y se informa por pantalla. En cualquier otro caso el alumno si está en la
+        // lista y se muestra la nota por pantalla
         double notafinal = alser.notaFinal();
-        if(notafinal==0.0){
+        if (notafinal == 0.0) {
             System.out.println("El alumno ingresado no se encuentra en la lista");
         } else {
             System.out.println("La nota final del alumno es: " + notafinal);
         }
-       
+
     }
 }
