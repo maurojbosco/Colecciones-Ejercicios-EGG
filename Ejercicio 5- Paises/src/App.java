@@ -28,5 +28,8 @@ public class App {
         // Se llama al método que le pide un país al usuario y si lo encuentra en el
         // conjunto lo elimina y muestra el conjunto actualizado por pantalla
         paser.eliminarPais();
+        // Se llama al método que ordena los paises alfabéticamente y los muestra por
+        // pantalla
+        paser.ordenarPaises();
     }
 }
