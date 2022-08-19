@@ -16,8 +16,23 @@ pantalla.
 pantalla.
 • Ordenar las películas por título, alfabéticamente y mostrarlo en pantalla.
 • Ordenar las películas por director, alfabéticamente y mostrarlo en pantalla. */
+
+import java.util.ArrayList;
+
+import Entidad.Pelicula;
+import Servicio.PeliculaService;
+
 public class App {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
-        
+        PeliculaService pelser = new PeliculaService();
+        ArrayList<Pelicula> pelis = pelser.crearPeliculas();
+        pelser.mostrarPeliculas();
+        pelser.ordenaMayorAMenor();
+        pelser.ordenaMenorAMayor();
+        pelser.ordenaTitulo();
+        pelser.ordenaDirector();
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class AlumnoService {
 
-    private ArrayList<Alumno> alumnos = new ArrayList();
+    private ArrayList<Alumno> alumnos = new ArrayList<>();
     private Scanner sn = new Scanner(System.in);
 
     // Método que mediante un bucle crea un objeto Alumno. Pide toda la información
@@ -16,9 +16,9 @@ public class AlumnoService {
 
         do {
             Alumno alumno = new Alumno();
-            ArrayList<Integer> notas = new ArrayList();
+            ArrayList<Integer> notas = new ArrayList<>();
             System.out.println("Ingrese el nombre del alumno");
-            alumno.setNombre(sn.next());
+            alumno.setNombre(sn.nextLine());
             System.out.println("Ingrese la nota 1 del alumno");
             notas.add(0, sn.nextInt());
             System.out.println("Ingrese la nota 2 del alumno");
@@ -38,7 +38,7 @@ public class AlumnoService {
     public double notaFinal() {
         System.out.println("Ingrese el nombre de alumno a calcular la nota final");
         String alumnom = sn.next();
-        ArrayList<Integer> notas = new ArrayList();
+        ArrayList<Integer> notas = new ArrayList<>();
         double prom = 0;
         double sum = 0;
         for (Alumno alumno : alumnos) {
