@@ -41,7 +41,7 @@ public class PeliculaService {
     // Método que ordena las películas de acuerdo a su duración( de mayor a menor) y
     // las muestra en pantalla
     public void ordenaMayorAMenor() {
-        Collections.sort(pelis, Pelicula.compararDuracionMayMen);
+        pelis.sort(Pelicula.compararDuracionMayMen);
         System.out.println("Películas ordenadas por duración de mayor a menor:");
         System.out.println(this.pelis);
     }
@@ -49,7 +49,7 @@ public class PeliculaService {
     // Método que ordena las películas de acuerdo a su duración( de menor a mayor) y
     // las muestra en pantalla
     public void ordenaMenorAMayor() {
-        Collections.sort(pelis, Pelicula.compararDuracionMenMay);
+        pelis.sort(Pelicula.compararDuracionMenMay);
         System.out.println("Películas ordenadas por duración de menor a mayor:");
         System.out.println(this.pelis);
     }
@@ -57,7 +57,7 @@ public class PeliculaService {
     // Método que ordena las películas por título, alfabéticamente y las muestra en
     // pantalla
     public void ordenaTitulo() {
-        Collections.sort(pelis, Pelicula.compararTituloAlf);
+        pelis.sort(Pelicula.compararTituloAlf);
         System.out.println("Películas ordenadas por título alfabéticamente");
         System.out.println(this.pelis);
     }
@@ -65,7 +65,7 @@ public class PeliculaService {
     // Método que ordena las películas por director, alfabéticamente y las muestra en
     // pantalla
     public void ordenaDirector() {
-        Collections.sort(pelis, Pelicula.compararDirectorAlf);
+        pelis.sort(Pelicula.compararDirectorAlf);
         System.out.println("Películas ordenadas por director alfabéticamente:");
         System.out.println(this.pelis);
     }

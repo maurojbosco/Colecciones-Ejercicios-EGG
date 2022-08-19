@@ -67,14 +67,14 @@ public class Pelicula {
     public static Comparator<Pelicula> compararTituloAlf = new Comparator<Pelicula>() {
         @Override
         public int compare(Pelicula o1, Pelicula o2) {
-            return o2.getTitulo().compareTo(o1.getTitulo());
+            return o1.getTitulo().compareTo(o2.getTitulo());
         }
 
     };
     public static Comparator<Pelicula> compararDirectorAlf = new Comparator<Pelicula>() {
         @Override
         public int compare(Pelicula o1, Pelicula o2) {
-            return o2.getDirector().compareTo(o1.getDirector());
+            return o1.getDirector().compareTo(o2.getDirector());
         }
 
     };
