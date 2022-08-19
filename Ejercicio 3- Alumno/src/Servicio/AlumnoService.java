@@ -1,6 +1,6 @@
-package Servicio;
+package servicio;
 
-import Entidad.Alumno;
+import entidad.Alumno;
 import java.util.Scanner;
 import java.util.ArrayList;
 

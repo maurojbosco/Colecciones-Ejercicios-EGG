@@ -1,20 +1,12 @@
-package Servicio;
+package servicio;
 
 import java.util.Scanner;
 
-import Entidad.Pelicula;
+import entidad.Pelicula;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class PeliculaService {
-    /*
-     * 
-     * 
-     * • Ordenar las películas por título, alfabéticamente y mostrarlo en pantalla.
-     * • Ordenar las películas por director, alfabéticamente y mostrarlo en
-     * pantalla.
-     */
     private ArrayList<Pelicula> pelis = new ArrayList<>();
     private Scanner sn = new Scanner(System.in);
 
@@ -62,7 +54,8 @@ public class PeliculaService {
         System.out.println(this.pelis);
     }
 
-    // Método que ordena las películas por director, alfabéticamente y las muestra en
+    // Método que ordena las películas por director, alfabéticamente y las muestra
+    // en
     // pantalla
     public void ordenaDirector() {
         pelis.sort(Pelicula.compararDirectorAlf);

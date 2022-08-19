@@ -17,22 +17,30 @@ pantalla.
 • Ordenar las películas por título, alfabéticamente y mostrarlo en pantalla.
 • Ordenar las películas por director, alfabéticamente y mostrarlo en pantalla. */
 
-import java.util.ArrayList;
-
-import Entidad.Pelicula;
-import Servicio.PeliculaService;
+import servicio.PeliculaService;
 
 public class App {
     /**
      * @param args
      */
     public static void main(String[] args) {
+        // Se intancia un objeto servicio para poder llamar a sus métodos
         PeliculaService pelser = new PeliculaService();
-        ArrayList<Pelicula> pelis = pelser.crearPeliculas();
+        // Se llama al método que crea Películas y las guarda en un ArrayList
+        pelser.crearPeliculas();
+        // Se llama al método que muestra películas
         pelser.mostrarPeliculas();
+        // Se llama al método que muestra las películas de mayor a menor segun su
+        // duración
         pelser.ordenaMayorAMenor();
+        // Se llama al método que muestra las películas de menor a mayor segun su
+        // duración
         pelser.ordenaMenorAMayor();
+        // Se llama al método que muestra las películas ordenadas alfabéticamente según
+        // sus títulos
         pelser.ordenaTitulo();
+        // Se llama al método que muestra las películas ordenadas alfabéticamente según
+        // sus directores
         pelser.ordenaDirector();
     }
 }

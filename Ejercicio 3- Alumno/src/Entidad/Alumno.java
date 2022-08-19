@@ -1,7 +1,6 @@
-package Entidad;
+package entidad;
 
 import java.util.ArrayList;
-
 
 public class Alumno {
     // Atributos
@@ -33,7 +32,8 @@ public class Alumno {
     public void setNotas(ArrayList<Integer> notas) {
         this.notas = notas;
     }
-    //To String
+
+    // To String
     @Override
     public String toString() {
         return "Alumno [nombre=" + nombre + ", notas=" + notas + "]";

@@ -10,15 +10,14 @@ final y se lo busca en la lista de Alumnos. Si está en la lista, se llama al m�
 del método se usará la lista notas para calcular el promedio final de alumno. Siendo este
 promedio final, devuelto por el método y mostrado en el main. */
 
-import java.util.ArrayList;
-import Entidad.Alumno;
-import Servicio.AlumnoService;
+import servicio.AlumnoService;
 
 public class App {
     public static void main(String[] args) {
-        // Se instancian alumnos y se los guarda en una arraylist
+        // Se intancia un objeto servicio para poder llamar a sus métodos
         AlumnoService alser = new AlumnoService();
-        ArrayList<Alumno> lista = alser.crearAlumnos();
+        // Se llama al método que crea Alumnos y los guarda en un ArrayList
+        alser.crearAlumnos();
         // se llama al método que calcula la nota final. A continuación se evalúa si la
         // nota final es igual a 0.0, de ser así el alumno buscado no está en la lista
         // y se informa por pantalla. En cualquier otro caso el alumno si está en la
