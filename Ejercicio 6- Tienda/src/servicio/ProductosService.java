@@ -29,6 +29,10 @@ public class ProductosService {
     public void modificarPrecio() {
         System.out.println("Ingrese el producto a actualizar su precio");
         String producto = sn.next();
+        if (!productos.containsKey(producto)) {
+            System.out.println("El producto no se encuentra en la lista");
+            return;
+        }
         System.out.println("Ingrese el nuevo precio del producto");
         int precio = sn.nextInt();
         productos.replace(producto, precio);
@@ -40,8 +44,12 @@ public class ProductosService {
     public void eliminarProducto() {
         System.out.println("Ingrese el producto a eliminar");
         String producto = sn.next();
-        productos.remove(producto);
-
+        if (productos.containsKey(producto)) {
+            productos.remove(producto);
+            return;
+        }
+        System.out.println("El producto no se encuentra en la lista");
+        return;
     }
 
     // Método que muestra todos los productos almacenados en el HashMap con su
